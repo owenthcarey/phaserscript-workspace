@@ -1,0 +1,35 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@phaserscript-workspace/xplat/core": ["libs/xplat/core/src/index.ts"],
+      "@phaserscript-workspace/xplat/environments": [
+        "libs/xplat/core/src/lib/environments/base/index.ts"
+      ],
+      "@phaserscript-workspace/xplat/features": [
+        "libs/xplat/features/src/index.ts"
+      ],
+      "@phaserscript-workspace/xplat/utils": ["libs/xplat/utils/src/index.ts"],
+      "@phaserscript-workspace/xplat/web/core": [
+        "libs/xplat/web/core/src/index.ts"
+      ],
+      "@phaserscript-workspace/xplat/web/features": [
+        "libs/xplat/web/features/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
