@@ -1,0 +1,10 @@
+.game-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.game-card {
+  max-width: 400px;
+  margin: 10px;
+}
