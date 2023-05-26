@@ -30,7 +30,9 @@
     "@nx/workspace": "16.2.2",
     "@schematics/angular": "16.0.2",
     "@types/jest": "29.4.0",
+    "@types/matter-js": "^0.18.5",
     "@types/node": "16.11.7",
+    "@types/p5": "^1.6.2",
     "@typescript-eslint/eslint-plugin": "5.59.7",
     "@typescript-eslint/parser": "5.59.7",
     "cypress": "^12.2.0",
@@ -63,6 +65,8 @@
     "@ngx-translate/http-loader": "~7.0.0",
     "@phaserscript-workspace/xplat-scss": "file:libs/xplat/scss/src",
     "core-js": "^3.6.5",
+    "matter-js": "^0.19.0",
+    "p5": "^1.6.0",
     "rxjs": "^7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "0.13.0"
