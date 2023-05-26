@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GamesComponent, PinballComponent } from './components';
+import {
+  DoodleJumpComponent,
+  GamesComponent,
+  PinballComponent,
+  SpaceShooterComponent,
+} from './components';
 
 const routes: Routes = [
   {
@@ -8,8 +13,16 @@ const routes: Routes = [
     component: GamesComponent,
   },
   {
+    path: 'doodle-jump',
+    component: DoodleJumpComponent,
+  },
+  {
     path: 'pinball',
     component: PinballComponent,
+  },
+  {
+    path: 'space-shooter',
+    component: SpaceShooterComponent,
   },
 ];
 
