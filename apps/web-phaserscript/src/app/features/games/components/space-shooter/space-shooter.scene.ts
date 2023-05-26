@@ -5,7 +5,7 @@ export class SpaceShooterScene extends Phaser.Scene {
   bullets?: Phaser.Physics.Arcade.Group;
 
   constructor() {
-    super({ key: 'GameScene' });
+    super({ key: 'SpaceShooterScene' });
   }
 
   preload() {
