@@ -9,9 +9,9 @@ export class SpaceShooterScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('player', 'assets/player.png');
-    this.load.image('bullet', 'assets/bullet.png');
-    this.load.image('enemy', 'assets/enemy.png');
+    this.load.image('player', 'assets/space-shooter/player.png');
+    this.load.image('bullet', 'assets/space-shooter/bullet.png');
+    this.load.image('enemy', 'assets/space-shooter/enemy.png');
   }
 
   create() {
