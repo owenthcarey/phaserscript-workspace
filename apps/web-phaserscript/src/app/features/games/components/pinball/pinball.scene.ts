@@ -21,12 +21,37 @@ export class PinballScene extends Phaser.Scene {
   }
 
   create() {
-    this.matter.world.setBounds(
-      0,
-      0,
-      this.cameras.main.width,
-      this.cameras.main.height
+    const gameWidth = this.cameras.main.width;
+    const gameHeight = this.cameras.main.height;
+
+    // Calculate the size of the camera viewport based on a 9:16 ratio
+    let viewportWidth = gameHeight * (9 / 16);
+    let viewportHeight = gameHeight;
+
+    // If the game width is less than the calculated viewport width,
+    // adjust the viewport width and height based on a 16:9 ratio instead
+    if (gameWidth < viewportWidth) {
+      viewportWidth = gameWidth;
+      viewportHeight = gameWidth * (16 / 9);
+    }
+
+    // Set the bounds of the world
+    this.matter.world.setBounds(0, 0, viewportWidth, viewportHeight);
+
+    // Set the camera viewport and center the viewport within the game area
+    this.cameras.main.setViewport(
+      (gameWidth - viewportWidth) / 2,
+      (gameHeight - viewportHeight) / 2,
+      viewportWidth,
+      viewportHeight
     );
+
+    const DESIGN_WIDTH = 900; // Original design width of your game
+    const DESIGN_HEIGHT = 1600; // Original design height of your game
+    const scaleX = viewportWidth / DESIGN_WIDTH;
+    const scaleY = viewportHeight / DESIGN_HEIGHT;
+    const scale = Math.min(scaleX, scaleY);
+
     // this.matter.add.image(200, 300, 'slingshot').setStatic(true).setAngle(180); // Slingshot at the center-top
     // this.matter.add.image(600, 300, 'slingshot').setStatic(true); // Slingshot at the center-top
     // this.matter.add.image(200, 500, 'bumper').setStatic(true); // Bumper on the left
@@ -63,24 +88,27 @@ export class PinballScene extends Phaser.Scene {
     //   .setStatic(true);
 
     this.ball = this.matter.add
-      .image(250, 500, 'ball')
+      .image(250 * scale, 500 * scale, 'ball')
+      .setScale(scale)
       .setBounce(1)
       .setCircle(8)
       .setFriction(0, 0, 0);
 
     this.leftFlipper = this.matter.add
-      .image(200, 700, 'flipper')
+      .image(200 * scale, 700 * scale, 'flipper')
+      .setScale(scale)
       .setFlip(true, true)
       .setAngle(30);
     this.rightFlipper = this.matter.add
-      .image(600, 700, 'flipper')
+      .image(600 * scale, 700 * scale, 'flipper')
+      .setScale(scale)
       .setFlip(false, true)
       .setAngle(-30);
 
     // Create static pivot bodies
     const leftPivot = this.matter.add.rectangle(
-      200 - this.leftFlipper.width / 2,
-      700,
+      (200 - this.leftFlipper.width / 2) * scale,
+      700 * scale,
       0,
       0,
       {
@@ -88,8 +116,8 @@ export class PinballScene extends Phaser.Scene {
       }
     );
     const rightPivot = this.matter.add.rectangle(
-      600 + this.rightFlipper.width / 2,
-      700,
+      (600 + this.rightFlipper.width / 2) * scale,
+      700 * scale,
       0,
       0,
       {
@@ -105,8 +133,8 @@ export class PinballScene extends Phaser.Scene {
       1,
       {
         pointA: {
-          x: -this.leftFlipper.width / 2,
-          y: -this.leftFlipper.height,
+          x: (-this.leftFlipper.width / 2) * scale,
+          y: -this.leftFlipper.height * scale,
         },
         pointB: { x: 0, y: 0 },
       }
@@ -118,8 +146,8 @@ export class PinballScene extends Phaser.Scene {
       1,
       {
         pointA: {
-          x: this.rightFlipper.width / 2,
-          y: -this.rightFlipper.height,
+          x: (this.rightFlipper.width / 2) * scale,
+          y: -this.rightFlipper.height * scale,
         },
         pointB: { x: 0, y: 0 },
       }

@@ -40,14 +40,16 @@ export class PinballComponent
         mode: Phaser.Scale.RESIZE,
         autoCenter: Phaser.Scale.CENTER_BOTH,
       },
+      autoRound: false, // prevent rounding of pixels, which can cause display issues
     };
-    this.phaserGame = new Phaser.Game(this.config);
+    // this.phaserGame = new Phaser.Game(this.config);
   }
 
   ngAfterViewInit() {
     if (this.gameContainer) {
       this.config!.width = this.gameContainer.nativeElement.clientWidth;
       this.config!.height = this.gameContainer.nativeElement.clientHeight;
+      // Create the Phaser game after getting the actual game container's dimensions
       this.phaserGame = new Phaser.Game(this.config);
       window.addEventListener('resize', this.resizeGame);
     }
