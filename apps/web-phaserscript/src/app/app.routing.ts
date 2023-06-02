@@ -12,6 +12,11 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'about',
+    loadChildren: () =>
+      import('./features/about/about.module').then((m) => m.AboutModule),
+  },
+  {
     path: 'games',
     loadChildren: () =>
       import('./features/games/games.module').then((m) => m.GamesModule),
