@@ -52,91 +52,112 @@ export class PinballScene extends Phaser.Scene {
     const scaleY = viewportHeight / DESIGN_HEIGHT;
     const scale = Math.min(scaleX, scaleY);
 
-    // this.matter.add.image(200, 300, 'slingshot').setStatic(true).setAngle(180); // Slingshot at the center-top
-    // this.matter.add.image(600, 300, 'slingshot').setStatic(true); // Slingshot at the center-top
-    // this.matter.add.image(200, 500, 'bumper').setStatic(true); // Bumper on the left
-    // this.matter.add.image(600, 500, 'bumper').setStatic(true); // Bumper on the right
+    const bumperPositions = [
+      { x: viewportWidth * 0.25, y: viewportHeight * 0.15 },
+      { x: viewportWidth * 0.75, y: viewportHeight * 0.15 },
+      { x: viewportWidth * 0.5, y: viewportHeight * 0.25 },
+    ];
+    bumperPositions.forEach((pos) => {
+      this.matter.add
+        .image(pos.x, pos.y, 'bumper')
+        .setScale(scale)
+        .setStatic(true);
+    });
 
-    // Top wall
-    // this.matter.add
-    //   .image(this.cameras.main.width / 2, 100, 'wall')
-    //   .setStatic(true);
-
-    // Bottom wall
-    // this.matter.add
-    //   .image(
-    //     this.cameras.main.width / 2,
-    //     this.cameras.main.height - 100,
-    //     'wall'
-    //   )
-    //   .setStatic(true);
-
-    // Left wall, rotated 90 degrees
-    // this.matter.add
-    //   .image(100, this.cameras.main.height / 2, 'wall')
-    //   .setAngle(90)
-    //   .setStatic(true);
-
-    // Right wall, rotated 90 degrees
-    // this.matter.add
-    //   .image(
-    //     this.cameras.main.width - 100,
-    //     this.cameras.main.height / 2,
-    //     'wall'
-    //   )
-    //   .setAngle(90)
-    //   .setStatic(true);
-
+    const ballStartPosition = {
+      x: viewportWidth * 0.5,
+      y: viewportHeight * 0.5,
+    }; // Adjust to where the ball starts in the image
     this.ball = this.matter.add
-      .image(250 * scale, 500 * scale, 'ball')
+      .image(ballStartPosition.x, ballStartPosition.y, 'ball')
       .setScale(scale)
-      .setBounce(1)
       .setCircle(8)
+      .setBounce(1)
       .setFriction(0, 0, 0);
 
+    const wallThickness = 20; // adjust as needed
+    // Top wall
+    this.matter.add
+      .image(viewportWidth / 2, wallThickness / 2, 'wall')
+      .setStatic(true)
+      .setScale(scale);
+    // Bottom wall (if visible in your image)
+    this.matter.add
+      .image(viewportWidth / 2, viewportHeight - wallThickness / 2, 'wall')
+      .setStatic(true)
+      .setScale(scale);
+    // Left wall
+    this.matter.add
+      .image(wallThickness / 2, viewportHeight * 0.3, 'wall')
+      .setAngle(90)
+      .setStatic(true)
+      .setScale(scale);
+    // Right wall
+    this.matter.add
+      .image(viewportWidth - wallThickness / 2, viewportHeight * 0.3, 'wall')
+      .setAngle(90)
+      .setStatic(true)
+      .setScale(scale);
+
+    const slingshotPositions = [
+      {
+        x: viewportWidth * 0.2,
+        y: viewportHeight * 0.55,
+        flipX: true,
+        flipY: false,
+      },
+      {
+        x: viewportWidth * 0.8,
+        y: viewportHeight * 0.55,
+        flipX: false,
+        flipY: false,
+      },
+      // Add your slingshot positions here, adjust x and y values to match the image
+    ];
+    slingshotPositions.forEach((pos) => {
+      this.matter.add
+        .image(pos.x, pos.y, 'slingshot')
+        .setScale(scale)
+        .setFlip(pos.flipX, pos.flipY)
+        .setStatic(true);
+    });
+
+    // Assume the bottom of the viewport is where the flippers are located
+    const flipperBaseY = viewportHeight * 0.8; // adjust 100 as needed to match the image
+    const flipperBaseXLeft = viewportWidth * 0.25; // adjust the multiplier to position correctly
+    const flipperBaseXRight = viewportWidth * 0.75; // adjust the multiplier to position correctly
     this.leftFlipper = this.matter.add
-      .image(200 * scale, 700 * scale, 'flipper')
+      .image(flipperBaseXLeft, flipperBaseY, 'flipper')
       .setScale(scale)
       .setFlip(true, true)
       .setAngle(30);
     this.rightFlipper = this.matter.add
-      .image(600 * scale, 700 * scale, 'flipper')
+      .image(flipperBaseXRight, flipperBaseY, 'flipper')
       .setScale(scale)
       .setFlip(false, true)
       .setAngle(-30);
-
+    // Assuming the flipper images are centered at their base
+    const flipperWidth = this.leftFlipper.width * scale; // Assuming both flippers are the same size
+    // Calculate the pivot points. The pivot should be located at the end of the flipper (where it connects to the pinball machine)
+    const leftPivotX = flipperBaseXLeft - flipperWidth / 2;
+    const rightPivotX = flipperBaseXRight + flipperWidth / 2;
+    const pivotY = flipperBaseY; // The Y position is the same for both pivots
     // Create static pivot bodies
-    const leftPivot = this.matter.add.rectangle(
-      (200 - this.leftFlipper.width / 2) * scale,
-      700 * scale,
-      0,
-      0,
-      {
-        isStatic: true,
-      }
-    );
-    const rightPivot = this.matter.add.rectangle(
-      (600 + this.rightFlipper.width / 2) * scale,
-      700 * scale,
-      0,
-      0,
-      {
-        isStatic: true,
-      }
-    );
-
-    // Add the constraints (i.e., the pivot joints)
+    const leftPivot = this.matter.add.rectangle(leftPivotX, pivotY, 5, 5, {
+      isStatic: true,
+    });
+    const rightPivot = this.matter.add.rectangle(rightPivotX, pivotY, 5, 5, {
+      isStatic: true,
+    });
+    // Add the constraints (i.e., the pivot joints) with a pointB offset that matches the flipper's pivot location
     this.matter.add.constraint(
       this.leftFlipper.body as BodyType,
       leftPivot,
       0,
       1,
       {
-        pointA: {
-          x: (-this.leftFlipper.width / 2) * scale,
-          y: -this.leftFlipper.height * scale,
-        },
-        pointB: { x: 0, y: 0 },
+        pointA: { x: 0, y: 0 },
+        pointB: { x: flipperWidth / 2, y: 0 }, // Adjust this offset based on your image
       }
     );
     this.matter.add.constraint(
@@ -145,11 +166,8 @@ export class PinballScene extends Phaser.Scene {
       0,
       1,
       {
-        pointA: {
-          x: (this.rightFlipper.width / 2) * scale,
-          y: -this.rightFlipper.height * scale,
-        },
-        pointB: { x: 0, y: 0 },
+        pointA: { x: 0, y: 0 },
+        pointB: { x: -flipperWidth / 2, y: 0 }, // Adjust this offset based on your image
       }
     );
 
