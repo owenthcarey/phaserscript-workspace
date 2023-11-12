@@ -9,10 +9,10 @@ import {
 import { PinballScene } from './pinball.scene';
 import Phaser from 'phaser';
 
-import { BaseComponent } from '@phaserscript-workspace/xplat/core';
+import { BaseComponent } from '@phaserscript/xplat/core';
 
 @Component({
-  selector: 'phaserscript-workspace-pinball',
+  selector: 'phaserscript-pinball',
   templateUrl: 'pinball.component.html',
 })
 export class PinballComponent

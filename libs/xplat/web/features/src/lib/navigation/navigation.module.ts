@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NavigationModule as SharedNavigationModule } from '@phaserscript-workspace/xplat/features';
+import { NavigationModule as SharedNavigationModule } from '@phaserscript/xplat/features';
 import { UIModule } from '../ui';
 import { NAVIGATION_COMPONENTS } from './components';
 import { MatToolbarModule } from '@angular/material/toolbar';

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
-import { BaseComponent } from '@phaserscript-workspace/xplat/core';
+import { BaseComponent } from '@phaserscript/xplat/core';
 
 @Component({
-  selector: 'phaserscript-workspace-home',
+  selector: 'phaserscript-home',
   templateUrl: 'home.component.html',
   // styleUrls: ['home.component.scss'],
 })

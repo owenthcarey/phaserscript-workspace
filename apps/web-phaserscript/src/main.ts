@@ -2,7 +2,7 @@ import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 // libs
-import { environment } from '@phaserscript-workspace/xplat/core';
+import { environment } from '@phaserscript/xplat/core';
 
 // app
 import { AppModule } from './app/app.module';

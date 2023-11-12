@@ -1,1 +1,1 @@
-export { PhaserscriptWorkspaceCoreModule } from './core.module';
+export { PhaserscriptCoreModule } from './core.module';

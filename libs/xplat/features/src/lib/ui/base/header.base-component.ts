@@ -1,7 +1,7 @@
 import { Directive, Input, Output, EventEmitter } from '@angular/core';
 
 // libs
-import { BaseComponent } from '@phaserscript-workspace/xplat/core';
+import { BaseComponent } from '@phaserscript/xplat/core';
 
 @Directive()
 export abstract class HeaderBaseComponent extends BaseComponent {

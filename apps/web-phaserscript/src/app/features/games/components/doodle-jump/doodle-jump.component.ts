@@ -8,10 +8,10 @@ import {
   MovingPlatform,
   Platform,
   PowerUp,
-} from '@phaserscript-workspace/xplat/core';
+} from '@phaserscript/xplat/core';
 
 @Component({
-  selector: 'phaserscript-workspace-doodle-jump',
+  selector: 'phaserscript-doodle-jump',
   templateUrl: 'doodle-jump.component.html',
 })
 export class DoodleJumpComponent

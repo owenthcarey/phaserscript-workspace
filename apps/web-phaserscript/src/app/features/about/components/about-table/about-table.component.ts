@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BaseComponent } from '@phaserscript-workspace/xplat/core';
+import { BaseComponent } from '@phaserscript/xplat/core';
 import {
   animate,
   state,
@@ -9,7 +9,7 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'phaserscript-workspace-about-table',
+  selector: 'phaserscript-about-table',
   templateUrl: 'about-table.component.html',
   styleUrls: ['about-table.component.scss'],
   animations: [

@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { throwIfAlreadyLoaded } from '@phaserscript-workspace/xplat/utils';
+import { throwIfAlreadyLoaded } from '@phaserscript/xplat/utils';
 import {
   CoreModule,
   PlatformLanguageToken,
   PlatformWindowToken,
-} from '@phaserscript-workspace/xplat/core';
+} from '@phaserscript/xplat/core';
 
 // bring in custom web services here...
 
@@ -50,12 +50,12 @@ export function createTranslateLoader(http: HttpClient) {
     }),
   ],
 })
-export class PhaserscriptWorkspaceCoreModule {
+export class PhaserscriptCoreModule {
   constructor(
     @Optional()
     @SkipSelf()
-    parentModule: PhaserscriptWorkspaceCoreModule
+    parentModule: PhaserscriptCoreModule
   ) {
-    throwIfAlreadyLoaded(parentModule, 'PhaserscriptWorkspaceCoreModule');
+    throwIfAlreadyLoaded(parentModule, 'PhaserscriptCoreModule');
   }
 }

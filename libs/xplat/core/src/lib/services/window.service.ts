@@ -2,7 +2,7 @@
 import { Injectable, Inject, ViewContainerRef } from '@angular/core';
 
 // app
-import { isObject, isNativeScript } from '@phaserscript-workspace/xplat/utils';
+import { isObject, isNativeScript } from '@phaserscript/xplat/utils';
 import { XPlatWindow } from '../models';
 import { PlatformWindowToken } from './tokens';
 

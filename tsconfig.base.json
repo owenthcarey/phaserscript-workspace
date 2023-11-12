@@ -15,18 +15,18 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@phaserscript-workspace/xplat/core": ["libs/xplat/core/src/index.ts"],
-      "@phaserscript-workspace/xplat/environments": [
+      "@phaserscript/xplat/core": ["libs/xplat/core/src/index.ts"],
+      "@phaserscript/xplat/environments": [
         "libs/xplat/core/src/lib/environments/base/index.ts"
       ],
-      "@phaserscript-workspace/xplat/features": [
+      "@phaserscript/xplat/features": [
         "libs/xplat/features/src/index.ts"
       ],
-      "@phaserscript-workspace/xplat/utils": ["libs/xplat/utils/src/index.ts"],
-      "@phaserscript-workspace/xplat/web/core": [
+      "@phaserscript/xplat/utils": ["libs/xplat/utils/src/index.ts"],
+      "@phaserscript/xplat/web/core": [
         "libs/xplat/web/core/src/index.ts"
       ],
-      "@phaserscript-workspace/xplat/web/features": [
+      "@phaserscript/xplat/web/features": [
         "libs/xplat/web/features/src/index.ts"
       ]
     }

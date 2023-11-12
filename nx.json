@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "phaserscript-workspace",
+  "npmScope": "phaserscript",
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx-cloud",

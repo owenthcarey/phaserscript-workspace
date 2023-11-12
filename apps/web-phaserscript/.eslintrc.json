@@ -9,7 +9,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "phaserscriptWorkspace",
+            "prefix": "phaserscript",
             "style": "camelCase"
           }
         ],
@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "phaserscript-workspace",
+            "prefix": "phaserscript",
             "style": "kebab-case"
           }
         ]

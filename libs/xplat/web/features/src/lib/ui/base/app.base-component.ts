@@ -1,6 +1,6 @@
 import { Directive, Inject } from '@angular/core';
 // libs
-import { BaseComponent } from '@phaserscript-workspace/xplat/core';
+import { BaseComponent } from '@phaserscript/xplat/core';
 
 @Directive()
 export abstract class AppBaseComponent extends BaseComponent {

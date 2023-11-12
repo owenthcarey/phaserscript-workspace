@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 // libs
-import { UISharedModule } from '@phaserscript-workspace/xplat/features';
+import { UISharedModule } from '@phaserscript/xplat/features';
 import { UI_COMPONENTS } from './components';
 
 const MODULES = [

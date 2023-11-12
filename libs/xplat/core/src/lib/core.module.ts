@@ -9,7 +9,7 @@ import { APP_BASE_HREF, CommonModule } from '@angular/common';
 
 // libs
 import { TranslateService } from '@ngx-translate/core';
-import { throwIfAlreadyLoaded } from '@phaserscript-workspace/xplat/utils';
+import { throwIfAlreadyLoaded } from '@phaserscript/xplat/utils';
 
 // app
 import { environment } from './environments/environment';

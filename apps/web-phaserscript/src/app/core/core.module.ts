@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 
 // xplat
-import { PhaserscriptWorkspaceCoreModule } from '@phaserscript-workspace/xplat/web/core';
+import { PhaserscriptCoreModule } from '@phaserscript/xplat/web/core';
 
 @NgModule({
-  imports: [PhaserscriptWorkspaceCoreModule],
+  imports: [PhaserscriptCoreModule],
 })
 export class CoreModule {}

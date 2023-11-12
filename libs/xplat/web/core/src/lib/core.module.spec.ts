@@ -5,11 +5,11 @@ describe('Core module generic test', () => {
 });
 
 /*
-import { PhaserscriptWorkspaceCoreModule } from './core.module';
+import { PhaserscriptCoreModule } from './core.module';
 
-describe('PhaserscriptWorkspaceCoreModule', () => {
+describe('PhaserscriptCoreModule', () => {
   it('should work', () => {
-    expect(new PhaserscriptWorkspaceCoreModule(null)).toBeDefined();
+    expect(new PhaserscriptCoreModule(null)).toBeDefined();
   });
 });
 */

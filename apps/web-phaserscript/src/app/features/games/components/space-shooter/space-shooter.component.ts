@@ -2,10 +2,10 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SpaceShooterScene } from './space-shooter.scene';
 import Phaser from 'phaser';
 
-import { BaseComponent } from '@phaserscript-workspace/xplat/core';
+import { BaseComponent } from '@phaserscript/xplat/core';
 
 @Component({
-  selector: 'phaserscript-workspace-space-shooter',
+  selector: 'phaserscript-space-shooter',
   templateUrl: 'space-shooter.component.html',
 })
 export class SpaceShooterComponent

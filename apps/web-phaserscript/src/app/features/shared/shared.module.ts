@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
 // xplat
-import { UIModule } from '@phaserscript-workspace/xplat/web/features';
+import { UIModule } from '@phaserscript/xplat/web/features';
 
 const MODULES = [UIModule];
 

@@ -2,7 +2,7 @@
   "name": "web-phaserscript",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "phaserscript-workspace",
+  "prefix": "phaserscript",
   "sourceRoot": "apps/web-phaserscript/src",
   "tags": [],
   "targets": {

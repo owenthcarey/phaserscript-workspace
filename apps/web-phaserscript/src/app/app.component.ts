@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 // xplat
-import { AppBaseComponent } from '@phaserscript-workspace/xplat/web/features';
+import { AppBaseComponent } from '@phaserscript/xplat/web/features';
 
 @Component({
-  selector: 'phaserscript-workspace-root',
+  selector: 'phaserscript-root',
   templateUrl: './app.component.html',
 })
 export class AppComponent extends AppBaseComponent {
