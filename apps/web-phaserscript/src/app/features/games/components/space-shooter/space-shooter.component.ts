@@ -7,6 +7,7 @@ import { BaseComponent } from '@phaserscript/xplat/core';
 @Component({
   selector: 'phaserscript-space-shooter',
   templateUrl: 'space-shooter.component.html',
+  styleUrls: ['space-shooter.component.scss'],
 })
 export class SpaceShooterComponent
   extends BaseComponent

@@ -14,6 +14,7 @@ import { BaseComponent } from '@phaserscript/xplat/core';
 @Component({
   selector: 'phaserscript-pinball',
   templateUrl: 'pinball.component.html',
+  styleUrls: ['pinball.component.scss'],
 })
 export class PinballComponent
   extends BaseComponent

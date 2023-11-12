@@ -1,5 +1,5 @@
-<div class="game-grid">
-  <mat-card *ngFor="let game of games" class="game-card">
+<div class="flex flex-wrap justify-around">
+  <mat-card *ngFor="let game of games" class="max-w-xs m-2.5">
     <mat-card-header>
       <mat-card-title>{{ game.title }}</mat-card-title>
       <mat-card-subtitle>{{ game.subtitle }}</mat-card-subtitle>

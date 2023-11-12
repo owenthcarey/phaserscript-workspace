@@ -13,6 +13,7 @@ import {
 @Component({
   selector: 'phaserscript-doodle-jump',
   templateUrl: 'doodle-jump.component.html',
+  styleUrls: ['doodle-jump.component.scss'],
 })
 export class DoodleJumpComponent
   extends BaseComponent
