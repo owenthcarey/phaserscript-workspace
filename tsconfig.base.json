@@ -19,13 +19,9 @@
       "@phaserscript/xplat/environments": [
         "libs/xplat/core/src/lib/environments/base/index.ts"
       ],
-      "@phaserscript/xplat/features": [
-        "libs/xplat/features/src/index.ts"
-      ],
+      "@phaserscript/xplat/features": ["libs/xplat/features/src/index.ts"],
       "@phaserscript/xplat/utils": ["libs/xplat/utils/src/index.ts"],
-      "@phaserscript/xplat/web/core": [
-        "libs/xplat/web/core/src/index.ts"
-      ],
+      "@phaserscript/xplat/web/core": ["libs/xplat/web/core/src/index.ts"],
       "@phaserscript/xplat/web/features": [
         "libs/xplat/web/features/src/index.ts"
       ]
