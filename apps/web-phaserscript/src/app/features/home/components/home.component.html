@@ -1,18 +1,54 @@
-<div class="border-2 rounded-xl m-2 p-2 flex flex-col space-y-2">
-  <h1 class="text-3xl font-bold underline">Welcome to PhaserScript</h1>
-  <p>Create amazing web and mobile games using NativeScript and Phaser.</p>
-</div>
+<mat-card class="m-2 p-2">
+  <mat-card-content>
+    <div class="flex flex-col space-y-2">
+      <h1 class="text-3xl font-bold">Welcome to PhaserScript</h1>
+      <p>Create amazing web and mobile apps with Angular, NativeScript, and
+        Phaser.</p>
+      <mat-grid-list cols="4" rowHeight="2:1">
+        <mat-grid-tile colspan="3" rowspan="1"
+                       class="bg-blue-300 rounded-tl-md">Phaser
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="2"
+                       class="bg-blue-300 rounded-r-md">NativeScript
+        </mat-grid-tile>
+        <mat-grid-tile colspan="3" rowspan="1"
+                       class="bg-blue-300 rounded-bl-md">Angular
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </mat-card-content>
+</mat-card>
 
-<div class="border-2 rounded-xl m-2 p-2 flex flex-col space-y-2">
-  <h2>Our Games</h2>
-  <p>We're proud to bring you high-quality games for all platforms. Check out
-    our games page to try them out!</p>
-  <button mat-raised-button color="primary" routerLink="/games">Explore Games
-  </button>
-  <h2>About PhaserScript</h2>
-  <p>PhaserScript is a new game studio focused on creating engaging and exciting
-    web and mobile games.</p>
-  <button mat-raised-button color="accent" routerLink="/about">Learn More
-  </button>
-  <button mat-raised-button color="warn">Contact Us</button>
-</div>
+<mat-card class="m-2 p-2">
+  <mat-card-content>
+    <div class="flex flex-col space-y-2">
+      <h2 class="text-xl font-bold">Our Games</h2>
+      <p>We're proud to bring you high-quality web and mobile games. Check out
+        our games page to try them out.</p>
+      <button mat-raised-button color="primary" routerLink="/games">Explore
+        Games
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="m-2 p-2">
+  <mat-card-content>
+    <div class="flex flex-col space-y-2">
+      <h2 class="text-xl font-bold">About PhaserScript</h2>
+      <p>PhaserScript is a new studio focused on creating engaging web and
+        mobile apps.</p>
+      <button mat-raised-button color="accent" routerLink="/about">Learn More
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="m-2 p-2">
+  <mat-card-content>
+    <div class="flex flex-col space-y-2">
+      <h2 class="text-xl font-bold">Contact us</h2>
+      <button mat-raised-button color="warn">Contact Us</button>
+    </div>
+  </mat-card-content>
+</mat-card>
