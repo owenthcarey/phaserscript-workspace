@@ -17,6 +17,13 @@ const routes: Routes = [
       import('./features/about/about.module').then((m) => m.AboutModule),
   },
   {
+    path: 'contact',
+    loadComponent: () =>
+      import('./features/contact/contact.component').then(
+        (m) => m.ContactComponent
+      ),
+  },
+  {
     path: 'games',
     loadChildren: () =>
       import('./features/games/games.module').then((m) => m.GamesModule),
