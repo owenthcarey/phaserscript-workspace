@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {
   DoodleJumpComponent,
+  ExampleComponent,
   GamesComponent,
   PinballComponent,
   SpaceShooterComponent,
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'doodle-jump',
     component: DoodleJumpComponent,
+  },
+  {
+    path: 'example',
+    component: ExampleComponent,
   },
   {
     path: 'pinball',
