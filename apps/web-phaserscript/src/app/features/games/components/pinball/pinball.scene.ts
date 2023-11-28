@@ -21,6 +21,10 @@ export class PinballScene extends Phaser.Scene {
   }
 
   create() {
+    // ----------------------------------------
+    // Viewport size
+    // ----------------------------------------
+
     const gameWidth = this.cameras.main.width;
     const gameHeight = this.cameras.main.height;
 
@@ -46,11 +50,19 @@ export class PinballScene extends Phaser.Scene {
       viewportHeight
     );
 
+    // ----------------------------------------
+    // Scale
+    // ----------------------------------------
+
     const DESIGN_WIDTH = 900; // Original design width of your game
     const DESIGN_HEIGHT = 1600; // Original design height of your game
     const scaleX = viewportWidth / DESIGN_WIDTH;
     const scaleY = viewportHeight / DESIGN_HEIGHT;
     const scale = Math.min(scaleX, scaleY);
+
+    // ----------------------------------------
+    // Bumpers
+    // ----------------------------------------
 
     const bumperPositions = [
       { x: viewportWidth * 0.25, y: viewportHeight * 0.15 },
@@ -64,6 +76,10 @@ export class PinballScene extends Phaser.Scene {
         .setStatic(true);
     });
 
+    // ----------------------------------------
+    // Ball
+    // ----------------------------------------
+
     const ballStartPosition = {
       x: viewportWidth * 0.5,
       y: viewportHeight * 0.5,
@@ -74,6 +90,10 @@ export class PinballScene extends Phaser.Scene {
       .setCircle(8)
       .setBounce(1)
       .setFriction(0, 0, 0);
+
+    // ----------------------------------------
+    // Walls
+    // ----------------------------------------
 
     const wallThickness = 20; // adjust as needed
     // Top wall
@@ -99,6 +119,10 @@ export class PinballScene extends Phaser.Scene {
       .setStatic(true)
       .setScale(scale);
 
+    // ----------------------------------------
+    // Slingshots
+    // ----------------------------------------
+
     const slingshotPositions = [
       {
         x: viewportWidth * 0.2,
@@ -121,6 +145,10 @@ export class PinballScene extends Phaser.Scene {
         .setFlip(pos.flipX, pos.flipY)
         .setStatic(true);
     });
+
+    // ----------------------------------------
+    // Flippers
+    // ----------------------------------------
 
     // Assume the bottom of the viewport is where the flippers are located
     const flipperBaseY = viewportHeight * 0.8; // adjust 100 as needed to match the image
@@ -170,6 +198,10 @@ export class PinballScene extends Phaser.Scene {
         pointB: { x: -flipperWidth / 2, y: 0 }, // Adjust this offset based on your image
       }
     );
+
+    // ----------------------------------------
+    // Cursors
+    // ----------------------------------------
 
     this.cursors = this.input.keyboard?.createCursorKeys();
   }
