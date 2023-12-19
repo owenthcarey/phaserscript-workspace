@@ -1,22 +1,24 @@
 <div class="flex flex-wrap justify-around">
-  <mat-card *ngFor="let game of games" class="max-w-xs m-2">
-    <mat-card-header>
-      <mat-card-title>
-        <p class="m-2">{{ game.title }}</p>
-      </mat-card-title>
-      <mat-card-subtitle>
-        <p class="m-2">{{ game.subtitle }}</p>
-      </mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image [src]="game.img" [alt]="'Photo of ' + game.title"
-         class="m-2 rounded-md">
-    <mat-card-content>
-      <p class="m-2">{{ game.description }}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary" [routerLink]="game.route"
-              class="m-2">PLAY
-      </button>
-    </mat-card-actions>
-  </mat-card>
+  @for (game of games; track game.title) {
+    <mat-card class="max-w-xs m-2">
+      <mat-card-header>
+        <mat-card-title>
+          <p class="m-2">{{ game.title }}</p>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <p class="m-2">{{ game.subtitle }}</p>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="game.img" [alt]="'Photo of ' + game.title"
+           class="m-2 rounded-md">
+      <mat-card-content>
+        <p class="m-2">{{ game.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" [routerLink]="game.route"
+                class="m-2">PLAY
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  }
 </div>
