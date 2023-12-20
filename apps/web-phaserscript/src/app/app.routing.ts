@@ -33,6 +33,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/home/home.module').then((m) => m.HomeModule),
   },
+  {
+    path: 'learn',
+    loadChildren: () =>
+      import('./features/learn/learn.module').then((m) => m.LearnModule),
+  },
 ];
 
 @NgModule({
