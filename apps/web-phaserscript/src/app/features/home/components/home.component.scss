@@ -1,0 +1,38 @@
+@keyframes flowGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Define a mixin for reusable styles */
+@mixin flowingTile($color1, $color2) {
+  background-image: linear-gradient(45deg, $color1, $color2);
+  background-size: 200% 200%; /* Make the gradient large enough */
+  animation: flowGradient 3s infinite linear;
+}
+
+.phaser-tile {
+  @include flowingTile(#e84545, #ffffff);
+}
+
+.angular-tile {
+  @include flowingTile(#dd0031, #ffffff);
+}
+
+.nest-tile {
+  @include flowingTile(#e0234e, #ffffff);
+}
+
+.nativescript-tile {
+  @include flowingTile(#65ADF1, #ffffff);
+}
+
+.nx-tile {
+  @include flowingTile(#5a45ff, #ffffff);
+}
