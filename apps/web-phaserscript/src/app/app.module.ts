@@ -17,7 +17,7 @@ import { counterReducer } from './core/store/reducers/counter.reducer';
     AppRoutingModule,
     BrowserAnimationsModule,
     NavigationModule,
-    StoreModule.forRoot({ count: counterReducer }, {}),
+    StoreModule.forRoot({ counter: counterReducer }, {}),
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
