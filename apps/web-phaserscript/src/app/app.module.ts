@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { NavigationModule } from '@phaserscript/xplat/web/features';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './core/store/reducers/counter.reducer';
 
 @NgModule({
   imports: [
@@ -15,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     BrowserAnimationsModule,
     NavigationModule,
+    StoreModule.forRoot({ count: counterReducer }, {}),
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],

@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LearnComponent, QuantumComputingComponent } from './components';
+import {
+  CounterComponent,
+  LearnComponent,
+  QuantumComputingComponent
+} from './components';
 
 const routes: Routes = [
   {
     path: '',
     component: LearnComponent,
+  },
+  {
+    path: 'counter',
+    component: CounterComponent,
   },
   {
     path: 'quantum-computing',
