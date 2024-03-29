@@ -9,6 +9,8 @@ import { NavigationModule } from '@phaserscript/xplat/web/features';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './core/store/reducers/counter.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { CounterEffects } from './core/store/effects/counter.effects';
 
 @NgModule({
   imports: [
@@ -18,6 +20,7 @@ import { counterReducer } from './core/store/reducers/counter.reducer';
     BrowserAnimationsModule,
     NavigationModule,
     StoreModule.forRoot({ counter: counterReducer }, {}),
+    EffectsModule.forRoot([CounterEffects]),
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],

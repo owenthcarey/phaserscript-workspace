@@ -15,6 +15,7 @@
     "@angular/compiler-cli": "17.0.4",
     "@angular/language-service": "17.0.4",
     "@nativescript/nx": "^15.0.0",
+    "@ngrx/eslint-plugin": "^17.1.1",
     "@nstudio/angular": "15.0.3",
     "@nstudio/web": "15.0.3",
     "@nstudio/web-angular": "15.0.3",
@@ -50,8 +51,7 @@
     "tailwindcss": "^3.3.5",
     "ts-jest": "29.1.0",
     "ts-node": "10.9.1",
-    "typescript": "5.2.2",
-    "@ngrx/eslint-plugin": "^17.1.1"
+    "typescript": "5.2.2"
   },
   "dependencies": {
     "@angular/animations": "17.0.4",
@@ -64,6 +64,7 @@
     "@angular/platform-browser": "17.0.4",
     "@angular/platform-browser-dynamic": "17.0.4",
     "@angular/router": "17.0.4",
+    "@ngrx/effects": "^17.1.1",
     "@ngrx/store": "^17.1.1",
     "@ngx-translate/core": "~14.0.0",
     "@ngx-translate/http-loader": "~7.0.0",
