@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {
   CounterComponent,
   LearnComponent,
+  MoviesComponent,
   QuantumComputingComponent
 } from './components';
 
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'counter',
     component: CounterComponent,
+  },
+  {
+    path: 'movies',
+    component: MoviesComponent,
   },
   {
     path: 'quantum-computing',
