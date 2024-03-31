@@ -6,7 +6,7 @@
 <!--</div>-->
 <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-10 overflow-auto">
   <div class="relative bg-white p-5 border border-gray-300 w-4/5 max-w-md mx-auto shadow-lg">
-    <span class="close-btn absolute top-0 right-0 mt-4 mr-4 text-gray-400 text-4xl font-bold cursor-pointer hover:text-black" (click)="closeModal()">&times;</span>
-    <iframe class="w-full h-80" [src]="videoUrl | safe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <span class="close-btn absolute top-0 right-0 mt-4 mr-4 text-gray-400 text-4xl font-bold cursor-pointer hover:text-black" (click)="closeDialog()">&times;</span>
+    <iframe class="w-full h-80" [src]="data.videoUrl | safe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 </div>

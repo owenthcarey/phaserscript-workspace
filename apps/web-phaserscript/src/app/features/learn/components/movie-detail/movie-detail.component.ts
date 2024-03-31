@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'phaserscript-movie-detail',
@@ -6,12 +7,18 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./movie-detail.component.scss']
 })
 export class MovieDetailComponent {
-  // @Input() show = false;
-  @Input() videoUrl: string = '';
-  @Output() close = new EventEmitter<void>();
+  // @Input() videoUrl: string = '';
+  // @Output() close = new EventEmitter<void>();
+  //
+  // closeModal(): void {
+  //   this.close.emit();
+  // }
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: { videoUrl: string },
+    private dialogRef: MatDialogRef<MovieDetailComponent>
+  ) { }
 
-  closeModal(): void {
-    // this.show = false;
-    this.close.emit();
+  closeDialog(): void {
+    this.dialogRef.close();
   }
 }
