@@ -1,5 +1,8 @@
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-3 gap-4">
   @for (movie of movies; track movie.id) {
     <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" class="w-full h-auto border border-gray-300" (click)="onMovieClick(movie.id)" alt="Movie Poster">
   }
 </div>
+@if (isModalOpen) {
+  <phaserscript-movie-detail [videoUrl]="selectedTrailerUrl" (close)="closeModal()"></phaserscript-movie-detail>
+}
