@@ -17,14 +17,10 @@ export class AppComponent extends AppBaseComponent {
     const selectedIndex = args.newIndex;
     switch (selectedIndex) {
       case 0:
-        this.routerExtensions.navigate([
-          { outlets: { homeTab: 'home' } }
-        ]);
+        this.routerExtensions.navigate([{ outlets: { homeTab: ['home'] } }]);
         break;
       case 1:
-        this.routerExtensions.navigate([
-          { outlets: { profileTab: 'profile' } }
-        ]);
+        this.routerExtensions.navigate([{ outlets: { profileTab: ['profile'] } }]);
         break;
     }
   }

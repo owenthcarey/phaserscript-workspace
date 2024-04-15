@@ -10,17 +10,4 @@ import { MovieService } from '@phaserscript/xplat/nativescript/core';
   templateUrl: './profile.component.html'
 })
 export class ProfileComponent extends BaseComponent {
-  cellsPerRow = 2;
-  cellHeight: number;
-  movieService = inject(MovieService);
-  movies: any[] = [];
-
-  constructor() {
-    super();
-    this.cellHeight = (4/3) * Screen.mainScreen.widthDIPs / this.cellsPerRow;
-    this.movieService.getUpcomingMovies().subscribe((response: any) => {
-      this.movies = response.results;
-      console.log(this.movies);
-    });
-  }
 }
