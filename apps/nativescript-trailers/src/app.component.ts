@@ -8,6 +8,9 @@ import { RouterExtensions } from '@nativescript/angular';
   templateUrl: './app.component.html'
 })
 export class AppComponent extends AppBaseComponent {
+  homeTabSetUp = false;
+  profileTabSetUp = false;
+
   constructor(appService: AppService, private routerExtensions: RouterExtensions) {
     super(appService);
   }
@@ -17,10 +20,16 @@ export class AppComponent extends AppBaseComponent {
     const selectedIndex = args.newIndex;
     switch (selectedIndex) {
       case 0:
-        this.routerExtensions.navigate([{ outlets: { homeTab: ['home'] } }]);
+        if (!this.homeTabSetUp) {
+          this.routerExtensions.navigate([{ outlets: { homeTab: ['home'] } }]);
+          this.homeTabSetUp = true;
+        }
         break;
       case 1:
-        this.routerExtensions.navigate([{ outlets: { profileTab: ['profile'] } }]);
+        if (!this.profileTabSetUp) {
+          this.routerExtensions.navigate([{ outlets: { profileTab: ['profile'] } }]);
+          this.profileTabSetUp = true;
+        }
         break;
     }
   }

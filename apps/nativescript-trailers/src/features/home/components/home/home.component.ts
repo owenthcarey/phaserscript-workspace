@@ -29,11 +29,14 @@ export class HomeComponent extends BaseComponent {
   onMovieTap(args: any) {
     const movie = this.movies[args.index];
     console.log("Tapped Movie:", movie);
-    const navigationExtras: NavigationExtras = {
-      state: {
-        movie: movie
-      }
-    };
-    this.routerExtensions.navigate(['home-detail'], navigationExtras);
+    // const navigationExtras: NavigationExtras = {
+    //   state: {
+    //     movie: movie
+    //   }
+    // };
+    // this.routerExtensions.navigate(['home/detail'], navigationExtras);
+    // this.routerExtensions.navigate([{ outlets: { homeTab: ['home/detail'] } }]);
+    // this.routerExtensions.navigate([{ outlets: { homeTab: ['home', 'detail'] } }]);
+    this.routerExtensions.navigate([{ outlets: { homeTab: ['test'] } }]);
   }
 }

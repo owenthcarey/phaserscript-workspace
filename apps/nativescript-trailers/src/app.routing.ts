@@ -7,6 +7,7 @@ import { NativeScriptRouterModule } from '@nativescript/angular';
 
 // app
 import { SharedModule } from './features/shared/shared.module';
+import { TestComponent } from '@phaserscript/xplat/nativescript/features';
 
 const routes: Routes = [
   {
@@ -18,6 +19,11 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () =>
       import('./features/home/home.module').then(m => m.HomeModule),
+    outlet: 'homeTab',
+  },
+  {
+    path: 'test',
+    component: TestComponent,
     outlet: 'homeTab',
   },
   {
