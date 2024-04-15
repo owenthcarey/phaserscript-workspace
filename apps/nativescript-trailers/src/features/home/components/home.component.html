@@ -1,9 +1,6 @@
-
-<StackLayout class="p-20">
-  <Label
-    automationText="helloLabel"
-    [text]="'hello' | translate"
-    class="h1 p-10 text-center"
-  ></Label>
-</StackLayout>
-
+<ActionBar title="Trailers"></ActionBar>
+<CollectionView [items]="movies" colWidth="50%" [rowHeight]="cellHeight">
+  <ng-template let-movie="item">
+    <Image [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" stretch="fill" />
+  </ng-template>
+</CollectionView>

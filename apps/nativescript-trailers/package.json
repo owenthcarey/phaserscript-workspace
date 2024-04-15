@@ -7,6 +7,7 @@
     "postinstall": "node ./tools/xplat-postinstall.js"
   },
   "dependencies": {
+    "@nativescript-community/ui-collectionview": "^5.1.3",
     "@nativescript/core": "*"
   },
   "devDependencies": {

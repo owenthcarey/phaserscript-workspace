@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "electron": "electron apps/web-phaserscript/src/electron-main.js",
-    "clean": "npx rimraf hooks node_modules package-lock.json yarn.lock && yarn"
+    "clean": "npx rimraf hooks node_modules package-lock.json yarn.lock && yarn",
+    "prettier": "npx prettier --write '**/*.{hbs,html,scss,ts}'"
   },
   "private": true,
   "devDependencies": {
