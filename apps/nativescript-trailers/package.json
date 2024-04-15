@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@nativescript-community/ui-collectionview": "^5.1.3",
+    "@nativescript-community/ui-material-bottom-navigation": "^7.2.49",
     "@nativescript/core": "*"
   },
   "devDependencies": {

@@ -1,0 +1,35 @@
+<GridLayout rows="*, auto">
+  <MDBottomNavigation
+    selectedIndex="0"
+    (selectedIndexChanged)="onSelectedIndexChanged($event)"
+  >
+    <MDTabStrip>
+      <MDTabStripItem>
+        <Label text="Home"></Label>
+<!--        <Image-->
+<!--          src="font://&#xe88a;"-->
+<!--          stretch="aspectFill"-->
+<!--          class="material-icon"-->
+<!--        ></Image>-->
+      </MDTabStripItem>
+      <MDTabStripItem>
+        <Label text="Profile"></Label>
+<!--        <Image-->
+<!--          src="font://&#xe7fd;"-->
+<!--          stretch="aspectFill"-->
+<!--          class="material-icon"-->
+<!--        ></Image>-->
+      </MDTabStripItem>
+    </MDTabStrip>
+    <MDTabContentItem>
+      <GridLayout>
+        <page-router-outlet name="homeTab"></page-router-outlet>
+      </GridLayout>
+    </MDTabContentItem>
+    <MDTabContentItem>
+      <GridLayout>
+        <page-router-outlet name="profileTab"></page-router-outlet>
+      </GridLayout>
+    </MDTabContentItem>
+  </MDBottomNavigation>
+</GridLayout>

@@ -16,8 +16,15 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => 
-      import('./features/home/home.module').then(m => m.HomeModule)
+    loadChildren: () =>
+      import('./features/home/home.module').then(m => m.HomeModule),
+    outlet: 'homeTab',
+  },
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('./features/profile/profile.module').then(m => m.ProfileModule),
+    outlet: 'profileTab',
   }
 ];
 
