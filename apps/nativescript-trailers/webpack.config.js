@@ -8,8 +8,8 @@ module.exports = (env) => {
 
   webpack.chainWebpack((config) => {
     // shared scss
-    config.resolve.alias.set('@workspace/xplat-scss', resolve(__dirname, '../../libs/xplat/scss/src/'));
-    config.resolve.alias.set('@workspace/xplat-nativescript-scss', resolve(__dirname, '../../libs/xplat/nativescript/scss/src/'));
+    config.resolve.alias.set('@phaserscript/xplat-scss', resolve(__dirname, '../../libs/xplat/scss/src/'));
+    config.resolve.alias.set('@phaserscript/xplat-nativescript-scss', resolve(__dirname, '../../libs/xplat/nativescript/scss/src/'));
   });
 
   return webpack.resolveConfig();
