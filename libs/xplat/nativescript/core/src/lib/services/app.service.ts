@@ -7,7 +7,7 @@ import { Device, isIOS, Application, Enums } from '@nativescript/core';
 // libs
 import { TranslateService } from '@ngx-translate/core';
 import { Subject } from 'rxjs';
-import { LogService, PlatformLanguageToken } from '@workspace/xplat/core';
+import { LogService, PlatformLanguageToken } from '@phaserscript/xplat/core';
 
 /**
  * This service can be used for low level app wiring

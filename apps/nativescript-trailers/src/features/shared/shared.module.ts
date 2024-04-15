@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
 // xplat
-import { UIModule } from '@workspace/xplat/nativescript/features';
+import { UIModule } from '@phaserscript/xplat/nativescript/features';
 
 const MODULES = [UIModule];
 

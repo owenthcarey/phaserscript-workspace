@@ -4,12 +4,12 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { NativeScriptModule, NativeScriptHttpClientModule } from '@nativescript/angular';
 import { Device } from '@nativescript/core';
 import { FontIconModule, USE_STORE } from 'nativescript-fonticon/angular';
-import { fontAwesomeIcons } from '@workspace/xplat/nativescript/utils';
+import { fontAwesomeIcons } from '@phaserscript/xplat/nativescript/utils';
 
 // libs
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { CoreModule, PlatformLanguageToken, PlatformWindowToken } from '@workspace/xplat/core';
-import { throwIfAlreadyLoaded } from '@workspace/xplat/utils';
+import { CoreModule, PlatformLanguageToken, PlatformWindowToken } from '@phaserscript/xplat/core';
+import { throwIfAlreadyLoaded } from '@phaserscript/xplat/utils';
 
 // app
 import { MobileWindowService } from './services/mobile-window.service';

@@ -1,5 +1,5 @@
-import { IEnvironment } from '@workspace/xplat/core';
-import { deepMerge } from '@workspace/xplat/utils';
+import { IEnvironment } from '@phaserscript/xplat/core';
+import { deepMerge } from '@phaserscript/xplat/utils';
 
 export const environmentBase = function (baseWorkspaceEnv: IEnvironment, appEnvironmentCustom: IEnvironment = {}) {
   // base app environment + customizations

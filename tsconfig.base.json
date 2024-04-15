@@ -36,27 +36,27 @@
       "@phaserscript/xplat/web/features": [
         "libs/xplat/web/features/src/index.ts"
       ],
-      "xplat/nativescript/core": [
+      "@phaserscript/xplat/nativescript/core": [
         "libs/xplat/nativescript/core/src/index.ts"
       ],
-      "xplat/nativescript/features": [
+      "@phaserscript/xplat/nativescript/features": [
         "libs/xplat/nativescript/features/src/index.ts"
       ],
-      "xplat/nativescript/utils": [
+      "@phaserscript/xplat/nativescript/utils": [
         "libs/xplat/nativescript/utils/src/index.ts"
       ],
-      "@workspace/xplat/core": [
-        "libs/xplat/core/src/index.ts"
-      ],
-      "@workspace/xplat/environments": [
-        "libs/xplat/core/src/lib/environments/base/index.ts"
-      ],
-      "@workspace/xplat/features": [
-        "libs/xplat/features/src/index.ts"
-      ],
-      "@workspace/xplat/utils": [
-        "libs/xplat/utils/src/index.ts"
-      ]
+//      "@workspace/xplat/core": [
+//        "libs/xplat/core/src/index.ts"
+//      ],
+//      "@workspace/xplat/environments": [
+//        "libs/xplat/core/src/lib/environments/base/index.ts"
+//      ],
+//      "@workspace/xplat/features": [
+//        "libs/xplat/features/src/index.ts"
+//      ],
+//      "@workspace/xplat/utils": [
+//        "libs/xplat/utils/src/index.ts"
+//      ]
     }
   },
   "exclude": [

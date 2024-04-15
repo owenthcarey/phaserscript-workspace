@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterExtensions } from '@nativescript/angular';
 
-import { HeaderBaseComponent } from '@workspace/xplat/features';
+import { HeaderBaseComponent } from '@phaserscript/xplat/features';
 
 @Component({
   moduleId: module.id,

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AppService } from '@workspace/xplat/nativescript/core';
-import { AppBaseComponent } from '@workspace/xplat/nativescript/features';
+import { AppService } from '@phaserscript/xplat/nativescript/core';
+import { AppBaseComponent } from '@phaserscript/xplat/nativescript/features';
 
 @Component({
   selector: 'phaserscript-root',

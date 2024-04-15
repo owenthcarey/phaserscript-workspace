@@ -3,7 +3,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptCommonModule, NativeScriptFormsModule, NativeScriptRouterModule } from '@nativescript/angular';
 
 import { FontIconModule } from 'nativescript-fonticon/angular';
-import { UISharedModule } from '@workspace/xplat/features';
+import { UISharedModule } from '@phaserscript/xplat/features';
 import { UI_COMPONENTS } from './components';
 
 const MODULES = [

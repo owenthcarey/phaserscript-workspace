@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { BaseComponent } from '@workspace/xplat/core';
+import { BaseComponent } from '@phaserscript/xplat/core';
 
 @Component({
   moduleId: module.id,
