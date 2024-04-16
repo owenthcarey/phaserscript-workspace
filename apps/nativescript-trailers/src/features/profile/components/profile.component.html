@@ -1,1 +1,41 @@
-<Label text="Profile Page"></Label>
+<ActionBar title="Profile"></ActionBar>
+<GridLayout rows="*">
+  <CollectionView
+    [items]="colors"
+    [itemTemplateSelector]="templateSelector"
+    [spanSize]="spanSize"
+    [colWidth]="cellSize"
+  >
+    <!-- Full-width header template -->
+    <ng-template cvTemplateKey="header" let-item="item">
+      <GridLayout rows="*,*" [height]="headerHeight" style="background-color: {{item.hex}};">
+        <GridLayout row="0" columns="*,*">
+          <Label
+            column="0"
+            style="color: white; text-align: center; background-color: gray;"
+            textWrap="true"
+            [text]="item.hex"
+          ></Label>
+        </GridLayout>
+        <GridLayout row="1" columns="*,*">
+<!--          <MDButton column="0" rippleColor="blue" text="text button"></MDButton>-->
+          <Button column="0" text="button 0"></Button>
+          <Button column="1" text="button 1"></Button>
+        </GridLayout>
+      </GridLayout>
+    </ng-template>
+
+    <!-- 1/3 width cell template -->
+    <ng-template cvTemplateKey="item" let-item="item">
+      <StackLayout [height]="cellSize" [style.backgroundColor]="item.hex">
+        <Label
+          class="text-white"
+          horizontalAlignment="center"
+          textWrap="true"
+          verticalAlignment="center"
+          [text]="item.hex"
+        ></Label>
+      </StackLayout>
+    </ng-template>
+  </CollectionView>
+</GridLayout>

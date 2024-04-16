@@ -9,6 +9,7 @@ import { NativeScriptRouterModule } from '@nativescript/angular';
 import { SharedModule } from '../shared/shared.module';
 import { PROFILE_COMPONENTS, ProfileComponent } from './components';
 import { CollectionViewModule } from '@nativescript-community/ui-collectionview/angular';
+import { NativeScriptMaterialButtonModule } from '@nativescript-community/ui-material-button/angular';
 
 export const routes: Routes = [
   {
@@ -18,7 +19,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [CollectionViewModule, SharedModule, NativeScriptRouterModule.forChild(routes)],
+  imports: [CollectionViewModule, SharedModule, NativeScriptRouterModule.forChild(routes), NativeScriptMaterialButtonModule],
   declarations: [...PROFILE_COMPONENTS],
   exports: [...PROFILE_COMPONENTS],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]

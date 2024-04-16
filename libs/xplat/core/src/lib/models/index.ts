@@ -1,3 +1,4 @@
+export * from './color.model';
 export * from './doodle.model';
 export * from './moving-platform.model';
 export * from './platform.model';
