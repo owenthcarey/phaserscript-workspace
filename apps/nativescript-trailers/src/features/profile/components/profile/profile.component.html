@@ -5,6 +5,7 @@
     [itemTemplateSelector]="templateSelector"
     [spanSize]="spanSize"
     [colWidth]="cellSize"
+    (itemTap)="onItemTap($event)"
   >
     <!-- Full-width header template -->
     <ng-template cvTemplateKey="header" let-item="item">

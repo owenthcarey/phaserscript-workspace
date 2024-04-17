@@ -31,7 +31,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/profile/profile.module').then(m => m.ProfileModule),
     outlet: 'profileTab',
-  }
+  },
+  {
+    path: 'test',
+    component: TestComponent,
+    outlet: 'profileTab',
+  },
 ];
 
 @NgModule({

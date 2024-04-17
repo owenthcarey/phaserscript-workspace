@@ -26,7 +26,7 @@ export class HomeComponent extends BaseComponent {
     });
   }
 
-  onMovieTap(args: any) {
+  onItemTap(args: any) {
     const movie = this.movies[args.index];
     console.log("Tapped Movie:", movie);
     // const navigationExtras: NavigationExtras = {
