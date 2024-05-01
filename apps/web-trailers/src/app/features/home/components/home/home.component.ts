@@ -3,6 +3,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { BaseComponent } from '@phaserscript/xplat/core';
 import { MovieService } from '@phaserscript/xplat/web/core';
 import { MatDialog } from '@angular/material/dialog';
+import { HomeDetailComponent } from '../home-detail/home-detail.component';
 
 @Component({
   selector: 'phaserscript-home',
@@ -30,10 +31,11 @@ export class HomeComponent extends BaseComponent implements OnInit {
         // Assuming trailers[0] is like "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         const embedUrl = this.convertToEmbedUrl(trailers[0]); // Using the first trailer URL
         if (embedUrl) {
-          // this.dialog.open(MovieDetailComponent, {
-          //   width: '80%',
-          //   data: { videoUrl: embedUrl } // Converted YouTube embed URL
-          // });
+          this.dialog.open(HomeDetailComponent, {
+            height: '400px',
+            width: '600px',
+            data: { videoUrl: embedUrl } // Converted YouTube embed URL
+          });
         }
       }
     });
