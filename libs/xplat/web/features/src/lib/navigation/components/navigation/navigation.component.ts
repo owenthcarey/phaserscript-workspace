@@ -10,6 +10,12 @@ import { Observable } from 'rxjs';
   styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent extends BaseComponent {
+  routes = [
+    { name: 'Home', path: '/home' },
+    { name: 'Games', path: '/games' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' }
+  ];
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(
