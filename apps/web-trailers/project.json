@@ -20,7 +20,10 @@
           "apps/web-trailers/src/favicon.ico",
           "apps/web-trailers/src/assets"
         ],
-        "styles": ["apps/web-trailers/src/styles.scss"],
+        "styles": [
+          "apps/web-trailers/src/styles.scss",
+          "@angular/material/prebuilt-themes/purple-green.css"
+        ],
         "scripts": []
       },
       "configurations": {

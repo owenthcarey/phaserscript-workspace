@@ -4,12 +4,16 @@ import { Component } from '@angular/core';
 import { AppBaseComponent } from '@phaserscript/xplat/web/features';
 
 @Component({
-    selector: 'phaserscript-root',
-    templateUrl: './app.component.html'
+  selector: 'phaserscript-root',
+  templateUrl: './app.component.html'
 })
 export class AppComponent extends AppBaseComponent {
+  navigationComponentRoutes = [
+    { name: 'Home', path: '/home' },
+    { name: 'Profile', path: '/profile' },
+  ];
 
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 }

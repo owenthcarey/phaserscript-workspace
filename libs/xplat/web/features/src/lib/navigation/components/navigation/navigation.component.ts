@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BaseComponent } from '@phaserscript/xplat/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, shareReplay } from 'rxjs/operators';
@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent extends BaseComponent {
-  routes = [
+  @Input() routes = [
     { name: 'Home', path: '/home' },
     { name: 'Games', path: '/games' },
     { name: 'About', path: '/about' },
