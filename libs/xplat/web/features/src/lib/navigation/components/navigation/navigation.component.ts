@@ -16,6 +16,7 @@ export class NavigationComponent extends BaseComponent {
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' }
   ];
+  @Input() title = 'PhaserScript';
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(
