@@ -4,7 +4,7 @@ import {
   CUSTOM_ELEMENTS_SCHEMA
 } from '@angular/core';
 import { Routes } from '@angular/router';
-import { NativeScriptRouterModule } from '@nativescript/angular';
+import { NativeDialogService, NativeScriptRouterModule } from '@nativescript/angular';
 
 import { SharedModule } from '../shared/shared.module';
 import { HOME_COMPONENTS, HomeComponent, HomeDetailComponent } from './components';
@@ -25,6 +25,7 @@ export const routes: Routes = [
   imports: [CollectionViewModule, SharedModule, NativeScriptRouterModule.forChild(routes)],
   declarations: [...HOME_COMPONENTS],
   exports: [...HOME_COMPONENTS],
-  schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
+  providers: [NativeDialogService]
 })
 export class HomeModule {}
