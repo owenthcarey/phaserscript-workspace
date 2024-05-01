@@ -48,7 +48,7 @@ export class HomeComponent extends BaseComponent {
     // });
     // https://twitter.com/nativescript/status/1491169244935241729
     const ref = this.nativeDialog.open(TestComponent);
-    ref.afterOpened().subscribe(() => console.log('after openend'));
+    ref.afterOpened().subscribe(() => console.log('afterOpened'));
     ref.beforeClosed().subscribe((result) => console.log('beforeClosed', result));
     ref.afterClosed().subscribe((result) => console.log('afterClosed', result));
   }
