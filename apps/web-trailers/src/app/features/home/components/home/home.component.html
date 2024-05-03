@@ -8,7 +8,7 @@
   @for (movie of movies; track movie.id) {
     <div style="position: relative;">
       <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" class="w-full h-auto border border-gray-300" (click)="onMovieClick(movie.id)" alt="Movie Poster">
-      <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon" style="position: absolute; bottom: 5px; right: 5px;" (click)="onFavoriteClick(movie.id)">
+      <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon" style="position: absolute; top: 8px; right: 8px;" (click)="onFavoriteClick(movie.id)">
         <mat-icon>favorite</mat-icon>
       </button>
     </div>
