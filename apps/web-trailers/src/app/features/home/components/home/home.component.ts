@@ -46,4 +46,8 @@ export class HomeComponent extends BaseComponent implements OnInit {
     const videoId = urlObj.searchParams.get('v');
     return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
   }
+
+  onFavoriteClick(movieId: string) {
+    console.log(`Favorite:`, movieId);
+  }
 }
