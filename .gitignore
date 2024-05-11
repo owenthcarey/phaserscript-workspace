@@ -43,3 +43,7 @@ Thumbs.db
 migrations.json
 
 .nx/cache
+
+# Next.js
+.next
+out

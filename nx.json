@@ -35,6 +35,11 @@
       "cache": true,
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
+    },
+    "@nx/next:build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "namedInputs": {
@@ -62,6 +67,12 @@
     },
     "@nx/angular:component": {
       "style": "scss"
+    },
+    "@nx/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
     }
   },
   "nxCloudAccessToken": "MzkyYzRkM2YtNGExNS00NTVjLWJmZmMtOTQ1ZmQxYWRiMGUxfHJlYWQtd3JpdGU=",

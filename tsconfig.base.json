@@ -33,7 +33,7 @@
       "@phaserscript/xplat/web/core": ["libs/xplat/web/core/src/index.ts"],
       "@phaserscript/xplat/web/features": [
         "libs/xplat/web/features/src/index.ts"
-      ],
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
