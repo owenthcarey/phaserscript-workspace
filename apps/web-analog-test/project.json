@@ -1,0 +1,55 @@
+{
+  "name": "web-analog-test",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@analogjs/platform:vite",
+      "defaultConfiguration": "production",
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "sourcemap": false,
+          "mode": "production"
+        }
+      },
+      "outputs": [
+        "{options.outputPath}",
+        "{workspaceRoot}/dist/apps/web-analog-test/.nitro",
+        "{workspaceRoot}/dist/apps/web-analog-test/ssr",
+        "{workspaceRoot}/dist/apps/web-analog-test/analog"
+      ],
+      "options": {
+        "main": "apps/web-analog-test/src/main.ts",
+        "configFile": "apps/web-analog-test/vite.config.ts",
+        "outputPath": "dist/apps/web-analog-test/client",
+        "tsConfig": "apps/web-analog-test/tsconfig.app.json"
+      }
+    },
+    "serve": {
+      "executor": "@analogjs/platform:vite-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "web-analog-test:build",
+        "port": 4200
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "web-analog-test:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "web-analog-test:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@analogjs/platform:vitest",
+      "outputs": ["{projectRoot}/coverage"]
+    }
+  },
+  "tags": [],
+  "sourceRoot": "apps/web-analog-test/src"
+}
