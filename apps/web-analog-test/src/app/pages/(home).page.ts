@@ -8,4 +8,4 @@ import { AnalogWelcomeComponent } from './analog-welcome.component';
   imports: [AnalogWelcomeComponent],
   template: ` <web-analog-test-analog-welcome /> `,
 })
-export default class HomeComponent {}
+export default class HomePageComponent {}
